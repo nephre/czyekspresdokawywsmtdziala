@@ -31,7 +31,6 @@ try {
 $expressBack = strtotime('2013-10-24');
 $today = time();
 $remainingDays = ceil(($expressBack - $today) / 86400);
-echo $remainingDays;
 
 // view layer
 ?>
