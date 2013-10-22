@@ -28,7 +28,10 @@ try {
 	$display = $e->getMessage();
 }
 
-
+$expressBack = strtotime('2013-10-24');
+$today = time();
+$remainingDays = ceil(($expressBack - $today) / 86400);
+echo $remainingDays;
 
 // view layer
 ?>
@@ -39,6 +42,11 @@ try {
 <center>
 <p><img src="coffeemaker_1.png"></img></p>
 <p><h1><?= $display ?></h1></p>
+<?php if ($remainingDays >= 0): ?>
+<p>
+Do powrotu ekspresu na II pietro pozostalo <?= $remainingDays ?> dni
+</p>
+<?php endif ?>
 </center>
 </body>
 </html>
