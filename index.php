@@ -36,7 +36,10 @@ try {
 
 <html>
 <body>
-<center><h1><?= $display ?></h1></center>
+<center>
+<p><img src="coffeemaker_1.png"></img></p>
+<p><h1><?= $display ?></h1></p>
+</center>
 </body>
 </html>
 
