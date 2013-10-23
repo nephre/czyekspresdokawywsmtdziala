@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="main.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background: #000000 url('bg.jpg') no-repeat fixed center;
+            background-size: cover;
+        }
+
+        h1, h2 {
+        	font-family: 'Noto Sans', sans-serif;
+        	font-size: 50px;
+        	text-align: center;
+        	text-transform: uppercase;
+        	color: #fff;
+        	padding-top: 200px;
+        }
+
+        h2 {
+        	font-size: 33px;
+        	padding-top: 50px;
+        }
+
+        #countdown {
+        	text-align: center;
+        }
+
+        #countdown div {
+        	display: inline-block;
+        	margin: 0 8px;
+        }
+
+        #countdown p {
+	     	font-family: 'Noto Sans', sans-serif;
+        	font-size: 18px;
+        	text-align: center;
+        	color: #fff;
+        }
+
+        #countdown span {
+        	display: inline-block;
+        	background: #1e5799;
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+			background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+			background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+			background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+			background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+			border-radius: 10px;
+        	font-family: 'Noto Sans', sans-serif;
+			font-size: 60px;
+			color: #fff;
+			padding: 4px 7px;
+			margin: 0 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Ekspres do kawy powróci za...</h1>
+<div id="countdown"></div>
+
+<h2>Stay tunned... AND DON'T CODE!</h2>
+<script>
+
+var target_date = new Date("Oct 25, 2013").getTime();
+ 
+var days, hours, minutes, seconds;
+ 
+var countdown = document.getElementById("countdown");
+ 
+setInterval(function () {
+ 
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    countdown.innerHTML =  "<div><span>" + days +"</span><p>days</p></div>" + "<div><span>"+ hours +"</span><p>hours</p></div> "
+    + "<div><span>"+ minutes +"</span><p>minutes</p></div> " + "<div><span>"+ seconds +"</span><p>seconds</p></div>";  
+ 
+}, 1000);
+
+</script>
+</body>
+</html>
