@@ -9,7 +9,7 @@ try {
 			$dziala = true; // dziala
 			break;
 		case 2:
-			$dziala = false; // nie dziala
+			$dziala = true; // nie dziala
 			break;
 		case 4:
 			$dziala = false;
