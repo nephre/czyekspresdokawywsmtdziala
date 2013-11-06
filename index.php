@@ -34,10 +34,37 @@ $remainingDays = ceil(($expressBack - $today) / 86400);
 
 // view layer
 ?>
-
-
 <html>
 <body>
+<!--
+If you're brave enough to browse the source, here's a bonus:
+
+              __ __
+            ,;::\::\
+          ,'/' `/'`/
+      _\,: '.,-'.-':.
+     -./"'  :    :  :\/,
+      ::.  ,:____;__; :-
+      :"  ( .`-*'o*',);
+       \.. ` `---'`' /
+        `:._..-   _.'
+        ,;  .     `.
+       /"'| |       \
+      ::. ) :        :
+      |" (   \       |
+      :.(_,  :       ;
+       \'`-'_/      /
+        `...   , _,'
+         |,|  : |
+         |`|  | |
+         |,|  | |
+     ,--.;`|  | '..--.
+    /;' "' ;  '..--. ))
+    \:.___(___   ) ))'
+           SSt`-'-''
+
+Found here: http://ascii.co.uk/art/garfield
+-->
 <center>
 <p><img src="coffeemaker_1.png"></img></p>
 <p><h1><?= $display ?></h1></p>
